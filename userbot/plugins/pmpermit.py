@@ -21,10 +21,10 @@ PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**If You Want You Can Leave A Message Here ! My Boss Will Surely See And Reply To You Soon !**"
 USER_BOT_WARN_ZERO = "You Were \n`╔══╗╔╗──────╔╗──────╔╗\n║╔╗║║║──────║║──────║║\n║╚╝╚╣║╔══╦══╣║╔╦══╦═╝║\n║╔═╗║║║╔╗║╔═╣╚╝╣║═╣╔╗║\n║╚═╝║╚╣╚╝║╚═╣╔╗╣║═╣╚╝║\n╚═══╩═╩══╩══╩╝╚╩══╩══╝` \nDue To Trying To Spam Inbox Of My Master !"
-USER_BOT_NO_WARN = ("`Hello My Friend ! This is` **F.R.I.D.A.Y**\n"
+USER_BOT_NO_WARN = ("`👋Hello My Friend ! This is` **F.R.I.D.A.Y**\n"
                     "`Private Messaging Security Protocol ⚠️`\n\n"
-                    "**Currently My Boss**\n"
-                    f"{DEFAULTUSER} is Busy ! Please Don't Spam My Masters Inbox\n\n"
+                    "**Currently My Master, Perry**\n"
+                    f"{DEFAULTUSER} is Offline ! Please Don't Spam in his Inbox\n\n"
                     f"{CUSTOM_MIDDLE_PMP} \n\n"
                     "**Kindly Send** `/start` **If You Want To Register Your Request**")
 
@@ -61,12 +61,12 @@ if Var.PRIVATE_GROUP_ID is not None:
         chat = await event.get_chat()
         if event.is_private:
           if chat.id == 1263617196:
-            await event.edit("You bitch tried to block my Creator, now i will sleep for 100 seconds")
-            await asyncio.sleep(100)
+            await event.edit("You cannot block the Creator, now your bot will sleep for 3 seconds")
+            await asyncio.sleep(3)
           else:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit(" ███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ \n\n**This is Uncool ! Now My boss Banned you nigga Due To backchodi 💩**[{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit(" ███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ \n\n**Oops! Congratulations You've been blocked by my master Perry.Now his last seen will turn to "Long time ago" and you cannot see his profile pictures again. plus he won't receive your messages either so kindly go to HELL. Thanks.**[{}](tg://user?id={})".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
@@ -80,7 +80,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         chat = await event.get_chat()
         if event.is_private:
           if chat.id == 813878981:
-            await event.edit("Sorry, I Can't Disapprove My Master")
+            await event.edit("Sorry, I Can't Disapprove Mr Stark")
           else:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)

@@ -13,7 +13,6 @@ import asyncio
 from typing import Union
 
 import aiohttp
-import spamwatch
 from spamwatch.types import Ban
 from pyrogram.errors.exceptions.bad_request_400 import (
     ChatAdminRequired, UserAdminInvalid)
